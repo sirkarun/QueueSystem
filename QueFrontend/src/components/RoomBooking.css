@@ -1,0 +1,149 @@
+/* styles.css */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section {
+    width: 33.33%;
+    padding: 20px;
+  }
+  
+  .section-inactive {
+    opacity: 0.5;
+  }
+  
+  .card {
+    border: 1px solid #d1d1d1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .header {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .header-box {
+    border: 1px solid #d1d1d1;
+    padding: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .header-text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .room-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .room-header {
+    border: 1px solid #d1d1d1;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .room-label {
+    font-weight: bold;
+  }
+  
+  .status-bar {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .available {
+    background-color: #c8e6c9;
+  }
+  
+  .locked {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .booked-slot {
+    background-color: #757575;
+    color: white;
+  }
+  
+  .select-bar {
+    background-color: #c8e6c9;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .booked-bar {
+    background-color: #757575;
+    color: white;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .selected-bar {
+    background-color: #c8e6c9;
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .button-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button {
+    background-color: #2196f3;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .half-width {
+    width: 50%;
+  }
+  
+  /* Additional Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .section-inactive {
+      display: none;
+    }
+  }
