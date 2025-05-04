@@ -270,12 +270,7 @@ const RoomBookingApp = () => {
               </div>
       
               <div className="button-container">
-                <button 
-                  onClick={handleSubmit}
-                  className="button"
-                >
-                  Done
-                </button>
+              
               </div>
             </div>
           )}
