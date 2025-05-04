@@ -4,7 +4,7 @@ import { io } from 'socket.io-client'; // Import socket.io-client
 import { v4 as uuidv4 } from 'uuid'; // Import UUID library
 import './RoomBooking.css';
 
-const socket = io('http://localhost:3000'); // เชื่อมต่อกับ backend
+const socket = io('https://queuesystem-production-3045.up.railway.app'); // เชื่อมต่อกับ backend
 
 const RoomBookingApp = () => {
   const [userId, setUserId] = useState(() => {
@@ -24,7 +24,7 @@ const RoomBookingApp = () => {
   const [queuePosition, setQueuePosition] = useState(null); // Add state to track queue position
 
   useEffect(() => {
-    fetch('http://localhost:3000/rooms')
+    fetch('https://queuesystem-production-3045.up.railway.app/rooms')
       .then(response => response.json())
       .then(data => {
         const roomsArray = Object.values(data);
@@ -121,7 +121,7 @@ const RoomBookingApp = () => {
         socket.emit('join_room', { roomId: storedRoomId, userId }); // Rejoin the room or queue
       } else {
         // If the room is not found in the current list, fetch it again
-        fetch('http://localhost:3000/rooms')
+        fetch('https://queuesystem-production-3045.up.railway.app/rooms')
           .then((response) => response.json())
           .then((data) => {
             const room = Object.values(data).find((room) => room.roomId === storedRoomId);
