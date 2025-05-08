@@ -24,7 +24,7 @@ const RoomBookingApp = () => {
   const [queuePosition, setQueuePosition] = useState(null); // Add state to track queue position
 
   useEffect(() => {
-    fetch('https://queuesystem-production-3045.up.railway.app/rooms')
+    fetch('https://queuesystem-production-1882.up.railway.app/rooms')
       .then(response => response.json())
       .then(data => {
         const roomsArray = Object.values(data);
@@ -121,7 +121,7 @@ const RoomBookingApp = () => {
         socket.emit('join_room', { roomId: storedRoomId, userId }); // Rejoin the room or queue
       } else {
         // If the room is not found in the current list, fetch it again
-        fetch('https://queuesystem-production-3045.up.railway.app/rooms')
+        fetch('https://queuesystem-production-1882.up.railway.app/rooms')
           .then((response) => response.json())
           .then((data) => {
             const room = Object.values(data).find((room) => room.roomId === storedRoomId);
